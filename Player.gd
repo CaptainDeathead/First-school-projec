@@ -35,3 +35,9 @@ func _physics_process(delta):
 		sprite.flip_h = true
 	elif vel.x>0:
 		sprite.flip_h = false
+
+func die():
+	get_tree().reload_current_scene()
+
+func collect_coin(value):
+	score += value

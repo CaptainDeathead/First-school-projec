@@ -30,3 +30,8 @@ func move_to(current, to, step):
 		if new < to:
 			new = to
 	return new
+
+
+func _on_Enemy_body_entered(body):
+	if body.name == "Player":
+		body.die()
