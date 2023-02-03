@@ -10,6 +10,10 @@ var gravity: int = 800
 var vel: Vector2 = Vector2()
 
 onready var sprite: Sprite = get_node("Sprite")
+# imports the ui script
+onready var ui: Node = get_node("/root/MainScene/CanvasLayer/UI")
+
+onready var audioPlayer : Node = get_node("/root/MainScene/Camera2D/AudioPlayer")
 
 func _physics_process(delta):
 	
@@ -27,7 +31,7 @@ func _physics_process(delta):
 	vel.y += gravity * delta
 	
 	# jump input
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		vel.y -= jumpForce
 	
 	# sprite direction
@@ -41,3 +45,5 @@ func die():
 
 func collect_coin(value):
 	score += value
+	ui.set_score_text(score)
+	audioPlayer.play_coin_sfx()
