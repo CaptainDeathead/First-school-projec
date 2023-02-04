@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # makes the variable type int
-var score: int = 0
+var LevelCollected : int = 0
 
 var speed: int = 200
 var jumpForce: int = 400
@@ -41,9 +41,12 @@ func _physics_process(delta):
 		sprite.flip_h = false
 
 func die():
+	AutoLoad.score -= LevelCollected
+	LevelCollected = 0
 	get_tree().reload_current_scene()
 
 func collect_coin(value):
-	score += value
-	ui.set_score_text(score)
+	AutoLoad.score += value
+	LevelCollected += value
+	ui.set_score_text(AutoLoad.score)
 	audioPlayer.play_coin_sfx()

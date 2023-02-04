@@ -5,7 +5,7 @@
 [ext_resource path="res://Tile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://CameraController.gd" type="Script" id=5]
-[ext_resource path="res://Portal_Level2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Portal_Level4.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Lava.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://AudioPlayer.gd" type="Script" id=9]
@@ -14,49 +14,95 @@
 
 [node name="MainScene" type="Node2D"]
 
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 864, 160 )
+moveDist = 250
+
+[node name="Enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1440, 352 )
+moveDist = 500
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 91, 39 )
+position = Vector2( 96, 72 )
 script = ExtResource( 2 )
 
 [node name="Tile" parent="." instance=ExtResource( 3 )]
 position = Vector2( 96, 160 )
 
 [node name="Tile2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 288 )
+position = Vector2( 288, 288 )
 
 [node name="Tile3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 288, 480 )
+position = Vector2( 416, 224 )
 
 [node name="Tile4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 352, 480 )
+position = Vector2( 544, 416 )
 
 [node name="Tile5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 544, 480 )
+position = Vector2( 672, 352 )
 
 [node name="Tile6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 608, 416 )
-
-[node name="Tile7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 736, 352 )
-
-[node name="Tile8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 800, 352 )
-
-[node name="Tile9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 864, 288 )
-
-[node name="Tile12" parent="." instance=ExtResource( 3 )]
 position = Vector2( 928, 352 )
 
-[node name="Enemy" parent="Tile12" instance=ExtResource( 4 )]
-position = Vector2( -640, 64 )
-moveDist = 260
+[node name="Tile7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1056, 288 )
+
+[node name="Tile8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1184, 224 )
+
+[node name="Tile9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1440, 416 )
 
 [node name="Tile10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 992, 352 )
+position = Vector2( 1696, 416 )
 
 [node name="Tile11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 992, 352 )
+position = Vector2( 1952, 416 )
+
+[node name="Tile13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2080, 352 )
+
+[node name="Tile25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2144, 288 )
+
+[node name="Tile26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2208, 224 )
+
+[node name="Tile27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2272, 224 )
+
+[node name="Tile28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2336, 160 )
+
+[node name="Tile14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2016, 352 )
+
+[node name="Tile16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2016, 160 )
+
+[node name="Tile17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1952, 96 )
+
+[node name="Tile18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1760, 160 )
+
+[node name="Tile19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1632, 96 )
+
+[node name="Tile20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1504, 32 )
+
+[node name="Tile21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1376, 32 )
+
+[node name="Tile22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1248, -32 )
+
+[node name="Tile23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1184, -32 )
+
+[node name="Tile24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1120, -32 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 300 )
@@ -94,6 +140,24 @@ position = Vector2( -416, 568 )
 [node name="Lava24" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1440, 568 )
 
+[node name="Lava31" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1504, 568 )
+
+[node name="Lava32" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1568, 568 )
+
+[node name="Lava33" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1632, 568 )
+
+[node name="Lava34" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1696, 568 )
+
+[node name="Lava35" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1760, 568 )
+
+[node name="Lava36" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1824, 568 )
+
 [node name="Lava25" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1376, 568 )
 
@@ -111,6 +175,63 @@ position = Vector2( 1120, 568 )
 
 [node name="Lava30" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1056, 568 )
+
+[node name="Lava37" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2272, 568 )
+
+[node name="Lava38" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2336, 568 )
+
+[node name="Lava39" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2400, 568 )
+
+[node name="Lava40" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2464, 568 )
+
+[node name="Lava41" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2528, 568 )
+
+[node name="Lava42" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2592, 568 )
+
+[node name="Lava43" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2656, 568 )
+
+[node name="Lava50" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2720, 568 )
+
+[node name="Lava51" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2784, 568 )
+
+[node name="Lava52" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2848, 568 )
+
+[node name="Lava53" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2912, 568 )
+
+[node name="Lava54" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2976, 568 )
+
+[node name="Lava55" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3040, 568 )
+
+[node name="Lava44" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2208, 568 )
+
+[node name="Lava45" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2144, 568 )
+
+[node name="Lava46" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2080, 568 )
+
+[node name="Lava47" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2016, 568 )
+
+[node name="Lava48" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1952, 568 )
+
+[node name="Lava49" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1888, 568 )
 
 [node name="Lava2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 96, 568 )
@@ -160,20 +281,27 @@ position = Vector2( 992, 568 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 8 )]
-margin_right = 32.0
-margin_bottom = 32.0
 
 [node name="Portal" parent="." instance=ExtResource( 6 )]
-position = Vector2( 992, 240 )
+position = Vector2( 1120, -144 )
 
 [node name="Coin" parent="." instance=ExtResource( 10 )]
-position = Vector2( 280, 328 )
+position = Vector2( 672, 288 )
 
 [node name="Coin2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 784, 208 )
+position = Vector2( 1280, 112 )
 
 [node name="Coin3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 480, 376 )
+position = Vector2( 1568, 304 )
+
+[node name="Coin4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1824, 304 )
+
+[node name="Coin5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1824, 64 )
+
+[node name="Coin6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1312, -88 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -183,3 +311,7 @@ motion_mirroring = Vector2( 1920, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 512, 40 )
 texture = ExtResource( 11 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[connection signal="body_entered" from="Enemy2" to="Enemy" method="_on_Enemy2_body_entered"]
