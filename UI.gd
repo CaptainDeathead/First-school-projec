@@ -1,4 +1,6 @@
 extends Control
+
+onready var player: Node = get_node("/root/MainScene/Player")
 	
 func _ready():
 	$ScoreText.text = str(AutoLoad.score)
@@ -17,3 +19,17 @@ func set_level_text():
 		$LevelText.text = "Level: 1"
 	else:
 		$LevelText.text = "Level: " + str(AutoLoad.level)
+
+
+func _on_ContinueButton_pressed():
+	player.is_paused = false
+	$PauseMenu.hide()
+
+
+func _on_ExitMenuButton_pressed():
+	OS.window_fullscreen = false
+	get_tree().change_scene("res://MainMenu.tscn")
+
+
+func _on_ExitHomeButton_pressed():
+	get_tree().quit()

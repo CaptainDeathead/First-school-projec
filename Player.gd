@@ -7,6 +7,8 @@ var speed: int = 200
 var jumpForce: int = 400
 var gravity: int = 800
 
+var is_paused = false setget set_is_paused
+
 var vel: Vector2 = Vector2()
 
 onready var sprite: Sprite = get_node("Sprite")
@@ -14,6 +16,17 @@ onready var sprite: Sprite = get_node("Sprite")
 onready var ui: Node = get_node("/root/MainScene/CanvasLayer/UI")
 
 onready var audioPlayer : Node = get_node("/root/MainScene/Camera2D/AudioPlayer")
+
+func _unhandled_input(event):
+	if event.is_action_pressed("pause"):
+		if self.is_paused == true:
+			ui.get_node("PauseMenu").hide()
+		else:
+			ui.get_node("PauseMenu").show()
+		self.is_paused = !is_paused
+
+func set_is_paused(value):
+	get_tree().paused = is_paused
 
 func _physics_process(delta):
 	

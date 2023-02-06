@@ -9,12 +9,19 @@ var game_data = {}
 func init():
 	load_data()
 	if game_data.level == 2:
+		OS.window_fullscreen = true
 		get_tree().change_scene("res://Level2.tscn")
 	elif game_data.level == 3:
+		OS.window_fullscreen = true
 		get_tree().change_scene("res://Level3.tscn")
 	elif game_data.level == 4:
+		OS.window_fullscreen = true
 		get_tree().change_scene("res://Level4.tscn")
+	elif game_data.level == 5:
+		OS.window_fullscreen = true
+		get_tree().change_scene("res://Level5.tscn")
 	else:
+		OS.window_fullscreen = true
 		get_tree().change_scene("res://MainScene.tscn")
 		
 	# score loading
